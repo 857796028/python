@@ -1,3 +1,4 @@
+
 # -*- coding:utf-8 -*-
 __author__ = 'BlackIce'
 import os
@@ -28,6 +29,7 @@ def all_files(root, patterns='*', single_level=False, yield_folders=False):
     :param yield_folders:
     :return:
     """
+    print("程序开始执行！！！！！")
     patterns = patterns.split(';')
     for path, sub_dirs, files in os.walk(root):
         if yield_folders:
