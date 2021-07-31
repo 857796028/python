@@ -1,0 +1,14 @@
+import os
+import pandas as pd
+    #获取指定目录下的文件夹
+filePath = 'D:\\To_study_excel\\merge_to_raw_name\\'
+os.listdir(filePath)
+for i,j,k in os.walk(filePath):
+    print(i)
+    print(j)
+    print(k)
+    print(type(k))
+    df = pd.DataFrame(k,columns=['已经上交的名单'])
+    #df.to_excel("company_name_li.xlsx", index=False) 保存到本地路径
+    df.to_excel("D:/To_study_excel/merge_to_result/合计上交的名单.xlsx",index=False)
+    print("程序运行结束！！！！")
